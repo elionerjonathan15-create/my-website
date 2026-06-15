@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse v3 - Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #FFFFFF;
+            background-color: #0D0D14;
+            overflow-x: hidden;
+        }
+        /* Navigation Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3%;
+            background: rgba(0,0,0,0.7);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #00E5FF;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #7C3AED;
+        }
+        /* Hero Section */
+        .hero {
+            background-image: url('placeholder-image.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 15px #00E5FF;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 15px #7C3AED;
+        }
+        .cta {
+            background-color: #00E5FF;
+            color: #0D0D14;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .cta:hover {
+            border-color: #7C3AED;
+            transform: scale(1.05);
+        }
+        /* Content Section Styles */
+        .content {
+            padding: 100px 3%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section {
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        /* Footer Styles */
+        .footer {
+            background-color: rgba(0,0,0,0.7);
+            padding: 1rem 3%;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .cta {
+                padding: 0.8rem 1.5rem;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Eclipse</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Join Eclipse Gaming Community</h1>
+        <p>Your adventure starts here</p>
+        <a href="#application" class="cta">Apply to Join</a>
+    </section>
+    <main class="content">
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>We are a passionate community of gamers dedicated to connecting players and fostering a competitive spirit around our favorite games. Join us to share strategies, participate in tournaments, and make lasting friendships.</p>
+        </section>
+        <section id="events" class="section">
+            <h2>Upcoming Events</h2>
+            <p>Check out our exciting tournaments and events happening soon. Register and test your skills against the best players!</p>
+            <ul>
+                <li>January Tournament - Register by Jan 20</li>
+                <li>Weekly Game Nights - Every Friday</li>
+                <li>Special Charity Event - Feb 10</li>
+            </ul>
+        </section>
+        <section id="application" class="section">
+            <h2>Membership Application</h2>
+            <p>Want to be a part of the Eclipse family? Fill out the application form below!</p>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                <label for="gamertag">Game Tag:</label>
+                <input type="text" id="gamertag" name="gamertag" required><br>
+                <label for="reason">Why do you want to join?</label><br>
+                <textarea id="reason" name="reason" rows="4" required></textarea><br>
+                <label for="social">Social Links (optional):</label>
+                <input type="text" id="social" name="social"><br>
+                <button type="submit" class="cta">Submit Application</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2023 Eclipse Community | All rights reserved.</p>
+    </footer>
+</body>
+</html>
